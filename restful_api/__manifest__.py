@@ -22,7 +22,7 @@ For detailed example of REST API refer *readme.md*
         'views/res_users.xml',
         'security/ir_model_access.csv',
     ],
-    'images': ['static/description/icon2.png'],
+    'images': ['static/description/main_screenshot.png'],
     'license': 'OPL-1',
     'price': 80.0,
     'currency': 'USD',
