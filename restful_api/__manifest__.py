@@ -5,7 +5,7 @@
     'author': 'Babatope Ajepe',
     'website': 'https://ajepe.github.io',
     'summary': 'REST API For Odoo',
-    'support': 'galagoapps@gmail.com'
+    'support': 'galagoapps@gmail.com',
     'description': """
 REST API For Odoo
 ====================
@@ -24,7 +24,7 @@ For detailed example of REST API refer *readme.md*
     ],
     'images': ['/static/description/icon2.png'],
     'license': 'OPL-1',
-    'price': 80.0,
+    'price': 86.0,
     'currency': 'USD',
     'installable': True,
     'auto_install': False,
