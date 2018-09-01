@@ -23,7 +23,7 @@ For detailed example of REST API refer *readme.md*
         'security/ir_model_access.csv',
     ],
     'images': ['/static/description/icon2.png'],
-    'price': 90.0,
+    'price': 80.0,
     'currency': 'USD',
     'installable': True,
     'auto_install': True,
