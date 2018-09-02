@@ -39,7 +39,7 @@ class APIAccessToken(models.Model):
             if access_token.has_expired():
                 access_token = None
         if not access_token and create:
-            expires = datetime.now() + timedelta(seconds=int(self.env.ref('odoorest_api.access_token_expires_in').sudo().value))
+            expires = datetime.now() + timedelta(seconds=int(self.env.ref('restful_api.access_token_expires_in').sudo().value))
             vals = {
                 'user_id': user_id,
                 'scope': 'userinfo',

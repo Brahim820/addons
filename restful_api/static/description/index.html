@@ -1,5 +1,64 @@
 <section class="container">
-    <div class="row oe_spaced">
+    <!-- <div class="row oe_spaced"> -->
         <h2 class="text-center">Restful API Documentation</h2>
+    <!-- </div> -->
+</section>
+<section class="container oe_dark">
+    <div class="row oe_spaced">
+        <div class="col-md-12 bg-white">
+            <h3 class="text-center">Getting Started</h3>
+            <ol>
+                <li>User requests for access-token with username and password</li>
+                <li>Odoo will validate the credentials</li>
+                <li>Odoo provides a signed access-token to the client</li>
+                <li>Client/client stores that token and sends it along with every request</li>
+                <li>Server verifies token and responds with data</li>
+                <code class="bg-white" style="white-space: pre-wrap;">
+import requests
+
+headers = {'content-type': 'application/x-www-form-urlencoded', 'charset':'utf-8'}
+login, password = 'demo', 'password' # please replace these dummy value with login credentials
+database = 'demo' # please replace  with the database name you want to connect to.
+base_url = 'https://www.examle.com'
+                </code>
+            </div>
+        </div>
+</section>
+
+<section class="container oe_dark">
+    <div class="row oe_spaced">
+        <div class="col-md-12 bg-white">
+            <h3 class="text-center">How to request for access-token</h3>
+            <div class="col-md-6">
+                <code class="bg-white" style="white-space: pre-wrap;">
+                    <u><b>request:</b></u>
+data = {
+    'login': login,
+    'password': password,
+    'db': database
+}
+url = "{}/api/auth/token".format(base_url)
+requests.get(url=url, data=data, headers=headers)
+
+                </code>
+            </div>
+            <div class="col-md-6">
+                <code class="bg-white" style="white-space: pre-wrap;">
+                    <u><b>response:</b></u>
+{
+    "company_id": 1,
+    "user_context": {
+        "lang": "en_US",
+        "tz": "False",
+        "uid": 5
+    },
+    "access_token": "b2ZpWcqjRLoPApgzHPRwdsisWVn1wl",
+    "expires_in": "600",
+    "uid": 5
+}
+
+                </code>
+            </div>
+        </div>
     </div>
 </section>

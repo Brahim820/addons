@@ -267,7 +267,7 @@ class APIController(http.Controller):
                 'user_context': request.session.get_context() if uid else {},
                 'company_id': request.env.user.company_id.id if uid else None,
                 'access_token': access_token,
-                'expires_in': request.env.ref('odoorest_api.access_token_expires_in').sudo().value,
+                'expires_in': request.env.ref('restful_api.access_token_expires_in').sudo().value,
                 'refresh_token': access_token
             }),
         )
